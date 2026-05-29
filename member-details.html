@@ -230,7 +230,7 @@
                 document.getElementById('member-img').alt = member.name;
                 document.getElementById('member-name').innerText = member.name;
                 document.getElementById('member-position').innerText = member.position;
-                
+                document.getElementById("member-img").src = teamData[memberId].image;
                 const rolesList = document.getElementById('member-roles');
                 rolesList.innerHTML = ""; 
                 
