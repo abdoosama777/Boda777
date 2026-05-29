@@ -28,7 +28,7 @@
             box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
         }
         .profile-container img {
-            width: 160px;
+            width: 140px;
             height: 200px;
             object-fit: cover;
             border-radius: 8px;
@@ -240,12 +240,7 @@
                     rolesList.appendChild(li);
                 });
 
-                // الكود ده بيشوف لو العضو رقم 4 يقرأ الصورة jpeg، ولو أي عضو تاني يقرأها jpg طبيعي
-if (memberId === "4") {
-    document.getElementById("member-img").src = "WhatsApp/Member " + memberId + ".jpeg";
-} else {
-    document.getElementById("member-img").src = "WhatsApp/Member " + memberId + ".jpg";
-}
+
                 
             } else {
                 document.getElementById('member-name').innerText = "Member Not Found";
