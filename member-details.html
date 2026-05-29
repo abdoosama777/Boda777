@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile | O&T</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .profile-container {
+            background-color: #111;
+            border: 1px solid #222;
+            border-top: 5px solid #00d2ff;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+        }
+        .profile-container img {
+            width: 160px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #00d2ff;
+            margin-bottom: 20px;
+        }
+        .profile-container h1 {
+            font-size: 28px;
+            margin: 10px 0 5px 0;
+        }
+        .profile-container .position {
+            color: #00d2ff;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+        .roles-box {
+            text-align: left;
+            background: #161616;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid #00d2ff;
+            margin-bottom: 30px;
+        }
+        .roles-box h3 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 16px;
+        }
+        .roles-box ul {
+            padding-left: 20px;
+            margin: 0;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #111;
+            background-color: #00d2ff;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #00b4db;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img id="member-img" src="" alt="Member Photo">
+        <h1 id="member-name">Loading...</h1>
+        <div id="member-position" class="position">Loading...</div>
+        
+        <div class="roles-box">
+            <h3>Key Responsibilities & Roles:</h3>
+            <ul id="member-roles"></ul>
+        </div>
+
+        <a href="index.html#members" class="back-btn">Back to Team</a>
+    </div>
+
+    <script>
+
+        const teamData = {
+            "1": {
+                name: "Kareem Abdelkarem",
+                position: "CEO",
+                image: "WhatsApp/Member 1.jpg",
+                roles: [
+                   "Leadership & Management"
+                ]
+            },
+            "2": {
+                name: "Mai Mohamed",
+                position: "CEO Assistant",
+                image: "WhatsApp/Member 2.jpg",
+                roles: [
+                    "Operations Support",
+                    "Business Organaizations"
+                ]
+            },
+            "3": {
+                name: "Hosam Mahmoud",
+                position: "Operations Coordinator",
+                image: "WhatsApp/Member 3.jpg",
+                roles: [
+                   "Accounting & Coordinations"
+                ]
+            },
+            "4": {
+                name: "Marolla Hedra",
+                position: "Creative & Events Coordinator",
+                image: "WhatsApp/Member 4.jpg",
+                roles: [
+             "Event Coordinator",
+                "Design & Content Support"
+                ]
+            },
+            "5": {
+                name: "Abdelrahman Noman",
+                position: "General Support Member",
+                image: "WhatsApp/Member 5.jpg",
+                roles: ["Cameraman",
+                    "Excutive Support"
+                ]
+            },
+            "6": {
+                name: "Abdelrahman Osama",
+                position: "Administrative Coordinator",
+                image: "WhatsApp/Member 6.jpg",
+                roles: ["Files Organaizations & Review",
+                    "Word & Excel Management",
+                    "Technical Support (HTML / CSS)"
+                ]
+            },
+            "7": {
+                name: "Tarek Abdelmenem",
+                position: "Technical Research Assistant",
+                image: "WhatsApp/Member 7.jpg",
+                roles: ["Technical Support",
+                    "Photoshop & Basic Editing",
+                    "Microsoft Office"
+                ]
+            },
+            "8": {
+                name: "Abdelrahman Atef",
+                position: "Media Lead",
+                image: "WhatsApp/Member 8.jpg",
+                roles: ["Graphic Design",
+                    " Video Editing",
+                    "Content Writing"
+                ]
+            },
+            "9": {
+                name: "Abdallah Mahmoud",
+                position: "Visual Content Specialist",
+                image: "WhatsApp/Member 9.jpg",
+                roles: ["Photography",
+                    "PowerPoint Presntation",
+                    "Video Editing"
+                ]
+            },
+            "10": {
+                name: "Asmaa Haroun",
+                position: "Research & Presentation Support",
+                image: "WhatsApp/Member 10.jpg",
+                roles: ["Research & Speaking",
+                    "Organizational Support"
+                ]
+            },
+            "11": {
+                name: "Kenzy Saed",
+                position: "Research Specialist",
+                image: "WhatsApp/Member 11.jpg",
+                roles: ["Data Collection & Data Preparations"
+                    
+                ]
+            },
+            "12": {
+                name: "Nervana Nabeel",
+                position: "Quality & Research Coordinator",
+                image: "WhatsApp/Member 12.jpg",
+                roles: ["Quality Control",
+                    "Data Organaization"
+                ]
+            }
+        };
+        
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            let memberId = urlParams.get('id');
+
+            if (!memberId && window.location.search) {
+                memberId = window.location.search.replace('?', '').split('=')[1] || window.location.search.replace('?', '');
+            }
+
+            if (memberId) {
+                memberId = memberId.trim();
+            }
+
+            if (memberId && teamData[memberId]) {
+                const member = teamData[memberId];
+                
+            
+                document.getElementById('member-img').src = member.image;
+                document.getElementById('member-img').alt = member.name;
+                document.getElementById('member-name').innerText = member.name;
+                document.getElementById('member-position').innerText = member.position;
+                
+                const rolesList = document.getElementById('member-roles');
+                rolesList.innerHTML = ""; 
+                
+                member.roles.forEach(role => {
+                    const li = document.createElement('li');
+                    li.innerText = role;
+                    rolesList.appendChild(li);
+                });
+                
+            } else {
+                document.getElementById('member-name').innerText = "Member Not Found";
+                document.getElementById('member-position').innerText = "Please return and select a valid member.";
+            }
+        } catch (error) {
+            console.error("JS Error:", error);
+            document.getElementById('member-name').innerText = "Execution Error";
+            document.getElementById('member-position').innerText = "Check your syntax in teamData.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O&T | Ocean of Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+    <header class="navbar">
+         <div class="logo">
+            <img src=Logo.png alt="Logo">
+        </div>
+        <div class="slogan">
+            <p>The Art of Travel</p>
+        </div>
+            <ul class="links">
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#about-project">About Project</a></li>
+            <li><a href="#members">Our Members</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+       
+    </header>
+    <div class="hero-banner">
+        <img src="Logo.png " alt="Logo">
+    </div>
+
+    <main>
+        <section id="about-us" class="about-us">
+            <h2>About Us</h2>
+            <p>We are a passionate team dedicated to redefining the concept of cultural tourism in Egypt. Our goal is to create meaningful travel experiences that go beyond simple visits to historical sites, allowing visitors to truly live and interact with the rich heritage of Upper Egypt.</p>
+        </section>
+        <hr>
+        <section id="about-project" class="about-project">
+            <h2>About Project</h2>
+            <p>Heritopia is a cultural and interactive tourism project located in Luxor, Upper Egypt. It offers visitors a unique experience that allows them to explore and live the traditional lifestyle of Upper Egypt through activities, crafts, and cultural performances. The project aims to preserve heritage while presenting it in a modern and engaging way.</p>
+        </section>
+        <hr>
+       <section id="members" class="members">
+    <h2>Our Members</h2>
+    
+    <div class="members-container">
+        
+        <div class="members-row">
+           <a href="member-details.html?id=1" class="members-card">
+             <img src="WhatsApp/Member 1.jpg" alt="Kareem">
+                <h3>Kareem Abdelkarem</h3>
+                <p style="color: gold;">CEO</p>
+           </a>
+        
+          <a href="member-details.html?id=2" class="members-card">
+                <img src="WhatsApp/Member 2.jpg" alt="Mai">
+                <h3>Mai Mohamed</h3>
+                <p style="color: silver;">CEO Assistant</p>
+           </a>
+            </div>
+        <div class="members-row">
+                      <a href="member-details.html?id=3" class="members-card">
+                          <img src="WhatsApp/Member 3.jpg" alt="Hosam">
+                <h3>Hosam Mahmoud</h3>
+                <p>Operations Coordinator</p>
+                      </a>
+             <a href="member-details.html?id=4" class="members-card">
+                   <img src="WhatsApp/Member 4.jpg" alt="Marolla">
+                <h3>Marolla Hedra</h3>
+                <p>Creative & Events Coordinator</p>
+                </a>
+                       <a href="member-details.html?id=5" class="members-card">
+                          <img src="WhatsApp/Member 5.jpg" alt="Noman">
+                <h3>Abdelrahman Noman</h3>
+                <p>General Support Member</p>
+                       </a>
+                    <a href="member-details.html?id=6" class="members-card">
+                         <img src="WhatsApp/Member 6.jpg" alt="Osama">
+                <h3>Abdelrahman Osama</h3>
+                <p>Administrative Coordinator</p>
+                    </a>
+                <a href="member-details.html?id=7" class="members-card">
+                       <img src="WhatsApp/Member 7.jpg" alt="Tarek">
+                <h3>Tarek Abdelmenem</h3>
+                <p>Technical Research Assistant</p>
+                </a>
+        </div>
+        <div class="members-row">
+            <a href="member-details.html?id=8" class="members-card">
+                <img src="WhatsApp/Member 8.jpg" alt="Atef">
+                <h3>Abdelrahman Atef</h3>
+                <p>Media Lead</p>
+               </a>
+            <a href="member-details.html?id=9" class="members-card">
+                        <img src="WhatsApp/Member 9.jpg" alt="Abdallah">
+                <h3>Abdallah Mahmoud</h3>
+                <p>Visual Content Specialist</p>
+            </a>
+            <a href="member-details.html?id=10" class="members-card">
+                      <img src="WhatsApp/Member 10.jpg" alt="Asmaa">
+                <h3>Asmaa Haroun</h3>
+                <p>Research & Presentation Support</p>
+            </a>
+             <a href="member-details.html?id=11" class="members-card">
+                  <img src="WhatsApp/Member 11.jpg" alt="Kenzy">
+                <h3>Kenzy Saed</h3>
+                <p>Research Specialist</p>
+             </a>
+            <a href="member-details.html?id=12" class="members-card">
+                <img src="WhatsApp/Member 12.jpg" alt="Nervana">
+                <h3>Nervana Nabeel</h3>
+                <p>Quality & Research Coordinator</p>
+            </a>
+        </div>
+    </div>
+</section>
+        <section id="contact" class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <p>Follow our news and contact us through our official Facebook page:</p>
+            <div class="contact-links"></div>
+            <a href="https://www.facebook.com/share/18vnSiyBaE" target="_blank" class="fb-link">Visit our Facebook Page</a>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 O&T | Ocean of Tourism</p>
+                <p class="credits">Designed by Abdelrahman Osama</p>
+            </div>
+        </footer>
+        <script>
+            const links = document.querySelectorAll('.links a');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        </script>
+    </main>
+</body>
+</html>
