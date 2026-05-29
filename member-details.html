@@ -231,6 +231,13 @@
                     li.innerText = role;
                     rolesList.appendChild(li);
                 });
+
+                // الكود ده بيشوف لو العضو رقم 4 يقرأ الصورة jpeg، ولو أي عضو تاني يقرأها jpg طبيعي
+if (memberId === "4") {
+    document.getElementById("member-img").src = "WhatsApp/Member " + memberId + ".jpeg";
+} else {
+    document.getElementById("member-img").src = "WhatsApp/Member " + memberId + ".jpg";
+}
                 
             } else {
                 document.getElementById('member-name').innerText = "Member Not Found";
