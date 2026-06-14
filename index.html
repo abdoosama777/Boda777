@@ -11,7 +11,13 @@
 </head>
 
 <body>
-    
+    <script>
+        if (new URLSearchParams(window.location.search).get('skipLoader') === 'true') {
+            // هنا بنقول للمتصفح: اكتب ستايل فوراً يخفي شاشة التحميل تماماً وبأعلى أولوية
+            // ⚠️ ملاحظة: لو شاشة التحميل عندك ليها ID أو كلاس تاني غير #loading-screen (اكتبه هنا)
+            document.write('<style>#loading-screen, .loading-screen, #preloader { display: none !important; opacity: 0 !important; visibility: hidden !important; }</style>');
+        }
+    </script>
 
     <header class="navbar">
          <div class="logo">
@@ -33,88 +39,89 @@
     </div>
 
     <main>
-        <section id="about-us" class="about-us">
+        <section id="about-us" class="about-us scroll-anime">
             <h2>About Us</h2>
             <p>We are a passionate team dedicated to redefining the concept of cultural tourism in Egypt. Our goal is to create meaningful travel experiences that go beyond simple visits to historical sites, allowing visitors to truly live and interact with the rich heritage of Upper Egypt.</p>
         </section>
         <hr>
-        <section id="about-project" class="about-project">
+        <section id="about-project" class="about-project scroll-anime">
             <h2>About Project</h2>
             <p>Heritopia is a cultural and interactive tourism project located in Luxor, Upper Egypt. It offers visitors a unique experience that allows them to explore and live the traditional lifestyle of Upper Egypt through activities, crafts, and cultural performances. The project aims to preserve heritage while presenting it in a modern and engaging way.</p>
         </section>
         <hr>
-       <section id="members" class="members">
+       <section id="members" class="members scroll-anime">
     <h2>Our Members</h2>
+
     
     <div class="members-container">
         
         <div class="members-row">
-           <a href="member-details.html?id=1" class="members-card">
+           <a href="member-details.html?id=1" class="members-card scroll-anime style="transition-delay: 0s;">
              <img src="WhatsApp/Member 1.jpg" alt="Kareem">
                 <h3>Kareem Abdelkarem</h3>
                 <p style="color: gold;">CEO</p>
            </a>
         
-          <a href="member-details.html?id=2" class="members-card">
+          <a href="member-details.html?id=2" class="members-card scroll-anime style="transition-delay: 0s;">
                 <img src="WhatsApp/Member 2.jpg" alt="Mai">
                 <h3>Mai Mohamed</h3>
                 <p style="color: silver;">CEO Assistant</p>
            </a>
             </div>
         <div class="members-row">
-                      <a href="member-details.html?id=3" class="members-card">
+                      <a href="member-details.html?id=3" class="members-card scroll-anime style="transition-delay: 0s;">
                           <img src="WhatsApp/Member 3.jpg" alt="Hosam">
                 <h3>Hosam Mahmoud</h3>
                 <p>Operations Coordinator</p>
                       </a>
-             <a href="member-details.html?id=4" class="members-card">
+             <a href="member-details.html?id=4" class="members-card scroll-anime style="transition-delay: 0s;">
                    <img src="WhatsApp/Member 4.jpg" alt="Marolla">
                 <h3>Marolla Hedra</h3>
                 <p>Creative & Events Coordinator</p>
                 </a>
-                       <a href="member-details.html?id=5" class="members-card">
+                       <a href="member-details.html?id=5" class="members-card scroll-anime style="transition-delay: 0s;">
                           <img src="WhatsApp/Member 5.jpg" alt="Noman">
                 <h3>Abdelrahman Noman</h3>
                 <p>General Support Member</p>
                        </a>
-                    <a href="member-details.html?id=6" class="members-card">
+                    <a href="member-details.html?id=6" class="members-card scroll-anime style="transition-delay: 0s;">
                          <img src="WhatsApp/Member 6.jpg" alt="Osama">
                 <h3>Abdelrahman Osama</h3>
                 <p>Administrative Coordinator</p>
                     </a>
-                <a href="member-details.html?id=7" class="members-card">
+                <a href="member-details.html?id=7" class="members-card scroll-anime style="transition-delay: 0s;">
                        <img src="WhatsApp/Member 7.jpg" alt="Tarek">
                 <h3>Tarek Abdelmenem</h3>
                 <p>Technical Research Assistant</p>
                 </a>
         </div>
         <div class="members-row">
-            <a href="member-details.html?id=8" class="members-card">
+            <a href="member-details.html?id=8" class="members-card scroll-anime style="transition-delay: 0s;">
                 <img src="WhatsApp/Member 8.jpg" alt="Atef">
                 <h3>Abdelrahman Atef</h3>
                 <p>Media Lead</p>
                </a>
-            <a href="member-details.html?id=9" class="members-card">
+            <a href="member-details.html?id=9" class="members-card scroll-anime style="transition-delay: 0s;">
                         <img src="WhatsApp/Member 9.jpg" alt="Abdallah">
                 <h3>Abdallah Mahmoud</h3>
                 <p>Visual Content Specialist</p>
             </a>
-            <a href="member-details.html?id=10" class="members-card">
+            <a href="member-details.html?id=10" class="members-card scroll-anime style="transition-delay: 0s;">
                       <img src="WhatsApp/Member 10.jpg" alt="Asmaa">
                 <h3>Asmaa Haroun</h3>
                 <p>Research & Presentation Support</p>
             </a>
-             <a href="member-details.html?id=11" class="members-card">
+             <a href="member-details.html?id=11" class="members-card scroll-anime style="transition-delay: 0s;">
                   <img src="WhatsApp/Member 11.jpg" alt="Kenzy">
                 <h3>Kenzy Saed</h3>
                 <p>Research Specialist</p>
              </a>
-            <a href="member-details.html?id=12" class="members-card">
+            <a href="member-details.html?id=12" class="members-card scroll-anime style="transition-delay: 0s;">
                 <img src="WhatsApp/Member 12.jpg" alt="Nervana">
-                <h3>Nervana Nabeel</h3>
+                <h3>Nervana Nabil</h3>
                 <p>Quality & Research Coordinator</p>
             </a>
-             <a href="member-details.html?id=13" class="members-card">
+               <a href="member-details.html?id=13" class="members-card scroll-anime style="transition-delay: 0s;">
                 <img src="WhatsApp/Member 13.jpeg" alt="Mariam" style="width: 100px; height: 140px; object-fit: cover;">
                 <h3>Mariam Mohamed</h3>
                 <p>Support Research Presenter</p>
@@ -122,18 +129,17 @@
         </div>
     </div>
 </section>
-        <section id="contact" class="contact" id="contact">
+
+
+        <section id="contact" class="contact scroll-anime" id="contact ">
             <h2>Contact Us</h2>
-            <p>Follow our news and contact us through our official Facebook page:</p>
-            <div class="contact-links"></div>
-            <a href="https://www.facebook.com/share/18vnSiyBaE" target="_blank" class="fb-link">Visit our Facebook Page</a>
+            <p>Follow our news and contact us through our official social media pages:</p>
+            <div class="social-buttons-container">
+                            <a href="https://www.facebook.com/share/18vnSiyBaE" target="_blank" class="social-btn facebook-btn">Visit our Facebook Page</a>
+             <a href="https://www.instagram.com/oceanoftourism?igsh=MXZmZXA3ZDI0Z2Zrcw==" target="_blank" class="social-btn instagram-btn">Visit our Instagram Page</a>
+             <a href="https://vm.tiktok.com/ZS9jyLBB3Temv-62pYU/" target="_blank" class="social-btn tiktok-btn">Visit our TikTok Page</a>
         </section>
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2026 O&T | Ocean of Tourism</p>
-                <p class="credits">Designed by Abdelrahman Osama</p>
             </div>
-        </footer>
         <script>
             const links = document.querySelectorAll('.links a');
             links.forEach(link => {
@@ -152,5 +158,137 @@
             });
         </script>
     </main>
+    <div id="preloader">
+        <div class="loader-content">
+            <div id="precentage">0%</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+        #precentage {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #00d2ff;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .progress-bar {
+            width: 250px;
+            height: 4px;
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .progress-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #00d2ff, #00d2ff);
+            box-shadow: 0 0 12px #00d2ff;
+            transition: width 0.05s linear;
+        }
+        .preload-finish {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let count = 0;
+            const precentageElement = document.getElementById('precentage');
+            const progressFill = document.querySelector('.progress-fill');
+            const preloader = document.getElementById('preloader')
+
+            const loaderInterval = setInterval(() => {
+                if (count < 100) {
+                    count++;
+                    precentageElement.innerText = count + '%'
+                    progressFill.style.width = count + '%'
+                } else {
+                    clearInterval(loaderInterval);
+
+                    setTimeout(() => {
+                        preloader.classList.add('preload-finish');
+                    }, 400)
+                }
+            }, 15)
+        })
+    </script>
+
+
+
+<footer>
+    <p> 2026 O&T | Ocean of Tourism</p> 
+     <p class="credits">Designed by Abdelrahman Osama</p>
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        const hiddenElements = document.querySelectorAll('.scroll-anime');
+        hiddenElements.forEach((el) => observer.observe(el));
+    });
+</script>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('skipLoader') === 'true') {
+    const loader = document.getElementById('loading-screen');
+    if (loader) {
+        loader.style.display = 'none'
+    }
+}
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show')
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+    const hiddenElements = document.querySelectorAll('scroll-anime')
+    hiddenElements.forEach((el) => observer.observe(el))
+})
+</script>
+</body>
+</html>
 </body>
 </html>
